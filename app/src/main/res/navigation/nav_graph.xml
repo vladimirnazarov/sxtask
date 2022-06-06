@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_component"
+    app:startDestination="@id/listFragment2">
+    <fragment
+        android:id="@+id/listFragment2"
+        android:name="com.tms.android.sxtask.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment2_to_secondScreenActivity2"
+            app:destination="@id/secondScreenActivity2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondScreenActivity2"
+        android:name="com.tms.android.sxtask.SecondScreenActivity"
+        android:label="SecondScreenActivity" >
+        <action
+            android:id="@+id/action_secondScreenActivity2_to_listFragment2"
+            app:destination="@id/listFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>
